@@ -31,30 +31,66 @@
             switch (blockId)
             {
                 case "block0":
+                    if (!string.IsNullOrWhiteSpace(Block0Content))
+                    {
+                        return;
+                    }
                     Block0Content = PrintCharacter();
                     break;
                 case "block1":
+                    if (!string.IsNullOrWhiteSpace(Block1Content))
+                    {
+                        return;
+                    }
                     Block1Content = PrintCharacter();
                     break;
                 case "block2":
+                    if (!string.IsNullOrWhiteSpace(Block2Content))
+                    {
+                        return;
+                    }
                     Block2Content = PrintCharacter();
                     break;
                 case "block3":
+                    if (!string.IsNullOrWhiteSpace(Block3Content))
+                    {
+                        return;
+                    }
                     Block3Content = PrintCharacter();
                     break;
                 case "block4":
+                    if (!string.IsNullOrWhiteSpace(Block4Content))
+                    {
+                        return;
+                    }
                     Block4Content = PrintCharacter();
                     break;
                 case "block5":
+                    if (!string.IsNullOrWhiteSpace(Block5Content))
+                    {
+                        return;
+                    }
                     Block5Content = PrintCharacter();
                     break;
                 case "block6":
+                    if (!string.IsNullOrWhiteSpace(Block6Content))
+                    {
+                        return;
+                    }
                     Block6Content = PrintCharacter();
                     break;
                 case "block7":
+                    if (!string.IsNullOrWhiteSpace(Block7Content))
+                    {
+                        return;
+                    }
                     Block7Content = PrintCharacter();
                     break;
                 case "block8":
+                    if (!string.IsNullOrWhiteSpace(Block8Content))
+                    {
+                        return;
+                    }
                     Block8Content = PrintCharacter();
                     break;
             }
