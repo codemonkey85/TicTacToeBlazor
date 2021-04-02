@@ -1,0 +1,19 @@
+﻿<div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div class="play-area">
+        <div id="block0" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block0"))">@Block0Content</div>
+        <div id="block1" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block1"))">@Block1Content</div>
+        <div id="block2" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block2"))">@Block2Content</div>
+        <div id="block3" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block3"))">@Block3Content</div>
+        <div id="block4" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block4"))">@Block4Content</div>
+        <div id="block5" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block5"))">@Block5Content</div>
+        <div id="block6" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block6"))">@Block6Content</div>
+        <div id="block7" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block7"))">@Block7Content</div>
+        <div id="block8" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block8"))">@Block8Content</div>
+    </div>
+    @if (isGameOver)
+    {
+        <h2>Winner is @Winner!</h2>
+    }
+    <button @onclick="@ResetBoard">RESET BOARD</button>
+</div>
