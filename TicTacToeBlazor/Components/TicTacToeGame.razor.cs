@@ -154,6 +154,7 @@
             Block8Content = string.Empty;
             turnNumber = 0;
             isGameOver = false;
+            GameIsTied = false;
             StateHasChanged();
         }
     }
