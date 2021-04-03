@@ -1,5 +1,21 @@
 ﻿<div class="container">
     <h1>Tic-Tac-Toe</h1>
+    @if (!isGameOver)
+    {
+        <h2>Current turn: @CurrentPlayerName</h2>
+    }
+    @if (isGameOver)
+    {
+        @if (GameIsTied)
+        {
+            <h2>Game is tied!</h2>
+        }
+        else
+        {
+            <h2>Winner is @CurrentPlayerName!</h2>
+        }
+    }
+    <h2>Number of turns so far: @turnNumber</h2>
     <div class="play-area">
         <div id="block0" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block0"))">@Block0Content</div>
         <div id="block1" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block1"))">@Block1Content</div>
@@ -11,9 +27,5 @@
         <div id="block7" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block7"))">@Block7Content</div>
         <div id="block8" disabled="@isGameOver" class="block" @onclick="@(() => SquareClicked("block8"))">@Block8Content</div>
     </div>
-    @if (isGameOver)
-    {
-        <h2>Winner is @Winner!</h2>
-    }
     <button @onclick="@ResetBoard">RESET BOARD</button>
 </div>

@@ -6,8 +6,7 @@
         private bool isGameOver = false;
 
         private bool IsXturn => turnNumber % 2 == 0;
-
-        public string Winner { get; set; }
+        private bool GameIsTied = false;
 
         private string Block0Content { get; set; }
         private string Block1Content { get; set; }
@@ -19,7 +18,7 @@
         private string Block7Content { get; set; }
         private string Block8Content { get; set; }
 
-        private string PrintCharacter() => IsXturn ? "X" : "O";
+        public string CurrentPlayerName => IsXturn ? "X" : "O";
 
         public void SquareClicked(string blockId)
         {
@@ -35,71 +34,74 @@
                     {
                         return;
                     }
-                    Block0Content = PrintCharacter();
+                    Block0Content = CurrentPlayerName;
                     break;
                 case "block1":
                     if (!string.IsNullOrWhiteSpace(Block1Content))
                     {
                         return;
                     }
-                    Block1Content = PrintCharacter();
+                    Block1Content = CurrentPlayerName;
                     break;
                 case "block2":
                     if (!string.IsNullOrWhiteSpace(Block2Content))
                     {
                         return;
                     }
-                    Block2Content = PrintCharacter();
+                    Block2Content = CurrentPlayerName;
                     break;
                 case "block3":
                     if (!string.IsNullOrWhiteSpace(Block3Content))
                     {
                         return;
                     }
-                    Block3Content = PrintCharacter();
+                    Block3Content = CurrentPlayerName;
                     break;
                 case "block4":
                     if (!string.IsNullOrWhiteSpace(Block4Content))
                     {
                         return;
                     }
-                    Block4Content = PrintCharacter();
+                    Block4Content = CurrentPlayerName;
                     break;
                 case "block5":
                     if (!string.IsNullOrWhiteSpace(Block5Content))
                     {
                         return;
                     }
-                    Block5Content = PrintCharacter();
+                    Block5Content = CurrentPlayerName;
                     break;
                 case "block6":
                     if (!string.IsNullOrWhiteSpace(Block6Content))
                     {
                         return;
                     }
-                    Block6Content = PrintCharacter();
+                    Block6Content = CurrentPlayerName;
                     break;
                 case "block7":
                     if (!string.IsNullOrWhiteSpace(Block7Content))
                     {
                         return;
                     }
-                    Block7Content = PrintCharacter();
+                    Block7Content = CurrentPlayerName;
                     break;
                 case "block8":
                     if (!string.IsNullOrWhiteSpace(Block8Content))
                     {
                         return;
                     }
-                    Block8Content = PrintCharacter();
+                    Block8Content = CurrentPlayerName;
                     break;
             }
 
             CheckIsGameOver();
 
-            if (!isGameOver)
+            turnNumber++;
+
+            if (!isGameOver && turnNumber == 9)
             {
-                turnNumber++;
+                isGameOver = true;
+                GameIsTied = true;
             }
         }
 
@@ -131,11 +133,6 @@
 
                 (!string.IsNullOrEmpty(Block2Content) && !string.IsNullOrEmpty(Block4Content) && !string.IsNullOrEmpty(Block6Content) &&
                 string.Equals(Block2Content, Block4Content) && string.Equals(Block2Content, Block6Content));
-
-            if (isGameOver)
-            {
-                Winner = PrintCharacter();
-            }
         }
 
         public void ResetBoard()
@@ -151,7 +148,6 @@
             Block8Content = string.Empty;
             turnNumber = 0;
             isGameOver = false;
-            Winner = string.Empty;
             StateHasChanged();
         }
     }
