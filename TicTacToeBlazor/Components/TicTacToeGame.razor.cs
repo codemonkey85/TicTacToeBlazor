@@ -4,6 +4,7 @@
     {
         int turnNumber = 0;
         private bool isGameOver = false;
+        private string WinnerName = string.Empty;
 
         private bool IsXturn => turnNumber % 2 == 0;
         private bool GameIsTied = false;
@@ -95,6 +96,11 @@
             }
 
             CheckIsGameOver();
+
+            if (isGameOver)
+            {
+                WinnerName = CurrentPlayerName;
+            }
 
             turnNumber++;
 
