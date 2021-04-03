@@ -9,89 +9,89 @@
         private bool IsXturn => turnNumber % 2 == 0;
         private bool GameIsTied = false;
 
-        private string Block0Content { get; set; }
-        private string Block1Content { get; set; }
-        private string Block2Content { get; set; }
-        private string Block3Content { get; set; }
-        private string Block4Content { get; set; }
-        private string Block5Content { get; set; }
-        private string Block6Content { get; set; }
-        private string Block7Content { get; set; }
-        private string Block8Content { get; set; }
+        private string Square0Content { get; set; }
+        private string Square1Content { get; set; }
+        private string Square2Content { get; set; }
+        private string Square3Content { get; set; }
+        private string Square4Content { get; set; }
+        private string Square5Content { get; set; }
+        private string Square6Content { get; set; }
+        private string Square7Content { get; set; }
+        private string Square8Content { get; set; }
 
         public string CurrentPlayerName => IsXturn ? "X" : "O";
 
-        public void SquareClicked(string blockId)
+        public void SquareClicked(string squareId)
         {
             if (isGameOver)
             {
                 return;
             }
 
-            switch (blockId)
+            switch (squareId)
             {
-                case "block0":
-                    if (!string.IsNullOrWhiteSpace(Block0Content))
+                case "square0":
+                    if (!string.IsNullOrWhiteSpace(Square0Content))
                     {
                         return;
                     }
-                    Block0Content = CurrentPlayerName;
+                    Square0Content = CurrentPlayerName;
                     break;
-                case "block1":
-                    if (!string.IsNullOrWhiteSpace(Block1Content))
+                case "square1":
+                    if (!string.IsNullOrWhiteSpace(Square1Content))
                     {
                         return;
                     }
-                    Block1Content = CurrentPlayerName;
+                    Square1Content = CurrentPlayerName;
                     break;
-                case "block2":
-                    if (!string.IsNullOrWhiteSpace(Block2Content))
+                case "square2":
+                    if (!string.IsNullOrWhiteSpace(Square2Content))
                     {
                         return;
                     }
-                    Block2Content = CurrentPlayerName;
+                    Square2Content = CurrentPlayerName;
                     break;
-                case "block3":
-                    if (!string.IsNullOrWhiteSpace(Block3Content))
+                case "square3":
+                    if (!string.IsNullOrWhiteSpace(Square3Content))
                     {
                         return;
                     }
-                    Block3Content = CurrentPlayerName;
+                    Square3Content = CurrentPlayerName;
                     break;
-                case "block4":
-                    if (!string.IsNullOrWhiteSpace(Block4Content))
+                case "square4":
+                    if (!string.IsNullOrWhiteSpace(Square4Content))
                     {
                         return;
                     }
-                    Block4Content = CurrentPlayerName;
+                    Square4Content = CurrentPlayerName;
                     break;
-                case "block5":
-                    if (!string.IsNullOrWhiteSpace(Block5Content))
+                case "square5":
+                    if (!string.IsNullOrWhiteSpace(Square5Content))
                     {
                         return;
                     }
-                    Block5Content = CurrentPlayerName;
+                    Square5Content = CurrentPlayerName;
                     break;
-                case "block6":
-                    if (!string.IsNullOrWhiteSpace(Block6Content))
+                case "square6":
+                    if (!string.IsNullOrWhiteSpace(Square6Content))
                     {
                         return;
                     }
-                    Block6Content = CurrentPlayerName;
+                    Square6Content = CurrentPlayerName;
                     break;
-                case "block7":
-                    if (!string.IsNullOrWhiteSpace(Block7Content))
+                case "square7":
+                    if (!string.IsNullOrWhiteSpace(Square7Content))
                     {
                         return;
                     }
-                    Block7Content = CurrentPlayerName;
+                    Square7Content = CurrentPlayerName;
                     break;
-                case "block8":
-                    if (!string.IsNullOrWhiteSpace(Block8Content))
+                case "square8":
+                    if (!string.IsNullOrWhiteSpace(Square8Content))
                     {
                         return;
                     }
-                    Block8Content = CurrentPlayerName;
+                    Square8Content = CurrentPlayerName;
                     break;
             }
 
@@ -114,44 +114,44 @@
         private void CheckIsGameOver()
         {
             isGameOver =
-                (!string.IsNullOrEmpty(Block0Content) && !string.IsNullOrEmpty(Block1Content) && !string.IsNullOrEmpty(Block2Content) &&
-                string.Equals(Block0Content, Block1Content) && string.Equals(Block0Content, Block2Content)) ||
+                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square1Content) && !string.IsNullOrEmpty(Square2Content) &&
+                string.Equals(Square0Content, Square1Content) && string.Equals(Square0Content, Square2Content)) ||
 
-                (!string.IsNullOrEmpty(Block3Content) && !string.IsNullOrEmpty(Block4Content) && !string.IsNullOrEmpty(Block5Content) &&
-                string.Equals(Block3Content, Block4Content) && string.Equals(Block3Content, Block5Content)) ||
+                (!string.IsNullOrEmpty(Square3Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square5Content) &&
+                string.Equals(Square3Content, Square4Content) && string.Equals(Square3Content, Square5Content)) ||
 
-                (!string.IsNullOrEmpty(Block6Content) && !string.IsNullOrEmpty(Block7Content) && !string.IsNullOrEmpty(Block8Content) &&
-                string.Equals(Block6Content, Block7Content) && string.Equals(Block6Content, Block8Content)) ||
-
-
-                (!string.IsNullOrEmpty(Block0Content) && !string.IsNullOrEmpty(Block3Content) && !string.IsNullOrEmpty(Block6Content) &&
-                string.Equals(Block0Content, Block3Content) && string.Equals(Block0Content, Block6Content)) ||
-
-                (!string.IsNullOrEmpty(Block1Content) && !string.IsNullOrEmpty(Block4Content) && !string.IsNullOrEmpty(Block7Content) &&
-                string.Equals(Block1Content, Block4Content) && string.Equals(Block1Content, Block7Content)) ||
-
-                (!string.IsNullOrEmpty(Block2Content) && !string.IsNullOrEmpty(Block5Content) && !string.IsNullOrEmpty(Block8Content) &&
-                string.Equals(Block2Content, Block5Content) && string.Equals(Block2Content, Block8Content)) ||
+                (!string.IsNullOrEmpty(Square6Content) && !string.IsNullOrEmpty(Square7Content) && !string.IsNullOrEmpty(Square8Content) &&
+                string.Equals(Square6Content, Square7Content) && string.Equals(Square6Content, Square8Content)) ||
 
 
-                (!string.IsNullOrEmpty(Block0Content) && !string.IsNullOrEmpty(Block4Content) && !string.IsNullOrEmpty(Block8Content) &&
-                string.Equals(Block0Content, Block4Content) && string.Equals(Block0Content, Block8Content)) ||
+                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square3Content) && !string.IsNullOrEmpty(Square6Content) &&
+                string.Equals(Square0Content, Square3Content) && string.Equals(Square0Content, Square6Content)) ||
 
-                (!string.IsNullOrEmpty(Block2Content) && !string.IsNullOrEmpty(Block4Content) && !string.IsNullOrEmpty(Block6Content) &&
-                string.Equals(Block2Content, Block4Content) && string.Equals(Block2Content, Block6Content));
+                (!string.IsNullOrEmpty(Square1Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square7Content) &&
+                string.Equals(Square1Content, Square4Content) && string.Equals(Square1Content, Square7Content)) ||
+
+                (!string.IsNullOrEmpty(Square2Content) && !string.IsNullOrEmpty(Square5Content) && !string.IsNullOrEmpty(Square8Content) &&
+                string.Equals(Square2Content, Square5Content) && string.Equals(Square2Content, Square8Content)) ||
+
+
+                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square8Content) &&
+                string.Equals(Square0Content, Square4Content) && string.Equals(Square0Content, Square8Content)) ||
+
+                (!string.IsNullOrEmpty(Square2Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square6Content) &&
+                string.Equals(Square2Content, Square4Content) && string.Equals(Square2Content, Square6Content));
         }
 
         public void ResetBoard()
         {
-            Block0Content = string.Empty;
-            Block1Content = string.Empty;
-            Block2Content = string.Empty;
-            Block3Content = string.Empty;
-            Block4Content = string.Empty;
-            Block5Content = string.Empty;
-            Block6Content = string.Empty;
-            Block7Content = string.Empty;
-            Block8Content = string.Empty;
+            Square0Content = string.Empty;
+            Square1Content = string.Empty;
+            Square2Content = string.Empty;
+            Square3Content = string.Empty;
+            Square4Content = string.Empty;
+            Square5Content = string.Empty;
+            Square6Content = string.Empty;
+            Square7Content = string.Empty;
+            Square8Content = string.Empty;
             turnNumber = 0;
             isGameOver = false;
             GameIsTied = false;

@@ -38,7 +38,7 @@ button {
     margin: 5px;
 }
 
-.block {
+.square {
     display: flex;
     width: 100px;
     height: 100px;
@@ -50,31 +50,31 @@ button {
     transition: background 0.2s ease-in-out;
 }
 
-    .block:hover {
+    .square:hover {
         cursor: pointer;
         background: #0ff30f;
     }
 
-#block0,
-#block1,
-#block2 {
+#square0,
+#square1,
+#square2 {
     border-top: none;
 }
 
-#block0,
-#block3,
-#block6 {
+#square0,
+#square3,
+#square6 {
     border-left: none;
 }
 
-#block6,
-#block7,
-#block8 {
+#square6,
+#square7,
+#square8 {
     border-bottom: none;
 }
 
-#block2,
-#block5,
-#block8 {
+#square2,
+#square5,
+#square8 {
     border-right: none;
 }
