@@ -39,7 +39,7 @@ button[b-8fmlm1fyvp] {
     margin: 5px;
 }
 
-.block[b-8fmlm1fyvp] {
+.square[b-8fmlm1fyvp] {
     display: flex;
     width: 100px;
     height: 100px;
@@ -51,32 +51,32 @@ button[b-8fmlm1fyvp] {
     transition: background 0.2s ease-in-out;
 }
 
-    .block:hover[b-8fmlm1fyvp] {
+    .square:hover[b-8fmlm1fyvp] {
         cursor: pointer;
         background: #0ff30f;
     }
 
-#block0[b-8fmlm1fyvp],
-#block1[b-8fmlm1fyvp],
-#block2[b-8fmlm1fyvp] {
+#square0[b-8fmlm1fyvp],
+#square1[b-8fmlm1fyvp],
+#square2[b-8fmlm1fyvp] {
     border-top: none;
 }
 
-#block0[b-8fmlm1fyvp],
-#block3[b-8fmlm1fyvp],
-#block6[b-8fmlm1fyvp] {
+#square0[b-8fmlm1fyvp],
+#square3[b-8fmlm1fyvp],
+#square6[b-8fmlm1fyvp] {
     border-left: none;
 }
 
-#block6[b-8fmlm1fyvp],
-#block7[b-8fmlm1fyvp],
-#block8[b-8fmlm1fyvp] {
+#square6[b-8fmlm1fyvp],
+#square7[b-8fmlm1fyvp],
+#square8[b-8fmlm1fyvp] {
     border-bottom: none;
 }
 
-#block2[b-8fmlm1fyvp],
-#block5[b-8fmlm1fyvp],
-#block8[b-8fmlm1fyvp] {
+#square2[b-8fmlm1fyvp],
+#square5[b-8fmlm1fyvp],
+#square8[b-8fmlm1fyvp] {
     border-right: none;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
