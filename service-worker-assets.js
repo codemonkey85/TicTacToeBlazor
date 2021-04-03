@@ -65,6 +65,10 @@
       "url": "manifest.json"
     },
     {
+      "hash": "sha256-DGqYFM7sXU+qS9uAf9I34Yx1F4rNNdDXEiFZKQq5wVg=",
+      "url": "routes.json"
+    },
+    {
       "hash": "sha256-nXByiCO4+RYyh+A88TSSZDwAJMF7M7Up\/h6dfAA19C8=",
       "url": "_framework\/dotnet.timezones.blat"
     },
@@ -237,5 +241,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "2xBYh+cX"
+  "version": "2g\/OgiEs"
 };
