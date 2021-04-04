@@ -37,6 +37,7 @@
                     }
                     Square0Content = CurrentPlayerName;
                     break;
+
                 case "square1":
                     if (!string.IsNullOrWhiteSpace(Square1Content))
                     {
@@ -44,6 +45,7 @@
                     }
                     Square1Content = CurrentPlayerName;
                     break;
+
                 case "square2":
                     if (!string.IsNullOrWhiteSpace(Square2Content))
                     {
@@ -51,6 +53,7 @@
                     }
                     Square2Content = CurrentPlayerName;
                     break;
+
                 case "square3":
                     if (!string.IsNullOrWhiteSpace(Square3Content))
                     {
@@ -58,6 +61,7 @@
                     }
                     Square3Content = CurrentPlayerName;
                     break;
+
                 case "square4":
                     if (!string.IsNullOrWhiteSpace(Square4Content))
                     {
@@ -65,6 +69,7 @@
                     }
                     Square4Content = CurrentPlayerName;
                     break;
+
                 case "square5":
                     if (!string.IsNullOrWhiteSpace(Square5Content))
                     {
@@ -72,6 +77,7 @@
                     }
                     Square5Content = CurrentPlayerName;
                     break;
+
                 case "square6":
                     if (!string.IsNullOrWhiteSpace(Square6Content))
                     {
@@ -79,6 +85,7 @@
                     }
                     Square6Content = CurrentPlayerName;
                     break;
+
                 case "square7":
                     if (!string.IsNullOrWhiteSpace(Square7Content))
                     {
@@ -86,6 +93,7 @@
                     }
                     Square7Content = CurrentPlayerName;
                     break;
+
                 case "square8":
                     if (!string.IsNullOrWhiteSpace(Square8Content))
                     {
@@ -123,7 +131,6 @@
                 (!string.IsNullOrEmpty(Square6Content) && !string.IsNullOrEmpty(Square7Content) && !string.IsNullOrEmpty(Square8Content) &&
                 string.Equals(Square6Content, Square7Content) && string.Equals(Square6Content, Square8Content)) ||
 
-
                 (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square3Content) && !string.IsNullOrEmpty(Square6Content) &&
                 string.Equals(Square0Content, Square3Content) && string.Equals(Square0Content, Square6Content)) ||
 
@@ -132,7 +139,6 @@
 
                 (!string.IsNullOrEmpty(Square2Content) && !string.IsNullOrEmpty(Square5Content) && !string.IsNullOrEmpty(Square8Content) &&
                 string.Equals(Square2Content, Square5Content) && string.Equals(Square2Content, Square8Content)) ||
-
 
                 (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square8Content) &&
                 string.Equals(Square0Content, Square4Content) && string.Equals(Square0Content, Square8Content)) ||
