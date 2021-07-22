@@ -119,47 +119,37 @@
             }
         }
 
-        private void CheckIsGameOver()
-        {
+        private void CheckIsGameOver() =>
             isGameOver =
-                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square1Content) && !string.IsNullOrEmpty(Square2Content) &&
-                string.Equals(Square0Content, Square1Content) && string.Equals(Square0Content, Square2Content)) ||
+                CheckWinningCondition(Square0Content, Square1Content, Square2Content) ||
+                CheckWinningCondition(Square3Content, Square4Content, Square5Content) ||
+                CheckWinningCondition(Square6Content, Square7Content, Square8Content) ||
+                CheckWinningCondition(Square0Content, Square3Content, Square6Content) ||
+                CheckWinningCondition(Square1Content, Square4Content, Square7Content) ||
+                CheckWinningCondition(Square2Content, Square5Content, Square8Content) ||
+                CheckWinningCondition(Square0Content, Square4Content, Square8Content) ||
+                CheckWinningCondition(Square2Content, Square4Content, Square6Content);
 
-                (!string.IsNullOrEmpty(Square3Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square5Content) &&
-                string.Equals(Square3Content, Square4Content) && string.Equals(Square3Content, Square5Content)) ||
-
-                (!string.IsNullOrEmpty(Square6Content) && !string.IsNullOrEmpty(Square7Content) && !string.IsNullOrEmpty(Square8Content) &&
-                string.Equals(Square6Content, Square7Content) && string.Equals(Square6Content, Square8Content)) ||
-
-                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square3Content) && !string.IsNullOrEmpty(Square6Content) &&
-                string.Equals(Square0Content, Square3Content) && string.Equals(Square0Content, Square6Content)) ||
-
-                (!string.IsNullOrEmpty(Square1Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square7Content) &&
-                string.Equals(Square1Content, Square4Content) && string.Equals(Square1Content, Square7Content)) ||
-
-                (!string.IsNullOrEmpty(Square2Content) && !string.IsNullOrEmpty(Square5Content) && !string.IsNullOrEmpty(Square8Content) &&
-                string.Equals(Square2Content, Square5Content) && string.Equals(Square2Content, Square8Content)) ||
-
-                (!string.IsNullOrEmpty(Square0Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square8Content) &&
-                string.Equals(Square0Content, Square4Content) && string.Equals(Square0Content, Square8Content)) ||
-
-                (!string.IsNullOrEmpty(Square2Content) && !string.IsNullOrEmpty(Square4Content) && !string.IsNullOrEmpty(Square6Content) &&
-                string.Equals(Square2Content, Square4Content) && string.Equals(Square2Content, Square6Content));
-        }
+        private static bool CheckWinningCondition(string square1, string square2, string square3) =>
+            !string.IsNullOrEmpty(square1) &&
+            !string.IsNullOrEmpty(square2) &&
+            !string.IsNullOrEmpty(square3) &&
+            string.Equals(square1, square2) &&
+            string.Equals(square1, square3);
 
         public void ResetBoard()
         {
-            Square0Content = string.Empty;
-            Square1Content = string.Empty;
-            Square2Content = string.Empty;
-            Square3Content = string.Empty;
-            Square4Content = string.Empty;
-            Square5Content = string.Empty;
-            Square6Content = string.Empty;
-            Square7Content = string.Empty;
+            Square0Content =
+            Square1Content =
+            Square2Content =
+            Square3Content =
+            Square4Content =
+            Square5Content =
+            Square6Content =
+            Square7Content =
             Square8Content = string.Empty;
             turnNumber = 0;
-            isGameOver = false;
+            isGameOver =
             GameIsTied = false;
             StateHasChanged();
         }
