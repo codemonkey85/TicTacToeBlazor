@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-MjBf9xEG+gQKWITLJLcp2IDBGrYl2Pu7z9J6K39KdBM=",
+      "hash": "sha256-kdeHtRE9c0pG9mOWR27csFFuyzjfVYxx9k7scL2LzSQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -145,7 +145,7 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-KEXF47QyYpWpZg11+a5E8jyHF6vl83\/45XCYAHVtH6A=",
+      "hash": "sha256-O72Dkty6O76OPeSzrnDW8sIlD9ANr9T7B2IYHE0Jteg=",
       "url": "_framework\/TicTacToeBlazor.dll"
     },
     {
@@ -221,5 +221,5 @@
       "url": "routes.json"
     }
   ],
-  "version": "bE\/z+m4X"
+  "version": "N6ydeEt0"
 };
