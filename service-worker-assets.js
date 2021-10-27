@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-kdeHtRE9c0pG9mOWR27csFFuyzjfVYxx9k7scL2LzSQ=",
+      "hash": "sha256-SO+t6wx27LiG65phnZvvrTZGFbOt9oEfTjtV7gjSpmI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -145,15 +145,15 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-O72Dkty6O76OPeSzrnDW8sIlD9ANr9T7B2IYHE0Jteg=",
+      "hash": "sha256-s3HEYu6jMIXSnzOap0WHt9MVfdxK+FEMTSOgEJ+3mhs=",
       "url": "_framework\/TicTacToeBlazor.dll"
     },
     {
-      "hash": "sha256-Sy8O5XKopfafuf+z4q\/zEBvnoIz9+8r0DruQV3A0WTo=",
+      "hash": "sha256-7fMmwjuIa92rXQ40ier8kt1fm4YNJh84Uk\/OyVeQeKM=",
       "url": "TicTacToeBlazor.styles.css"
     },
     {
-      "hash": "sha256-SO\/fuIIWUxoIu1OABrOpK5n\/AvzxJcg+0H3PT1eutAE=",
+      "hash": "sha256-7MOr\/pC8\/GRFZHBRiKA\/O34gmkG8Y7cTgEXsbdPpYWQ=",
       "url": "css\/app.css"
     },
     {
@@ -221,5 +221,5 @@
       "url": "routes.json"
     }
   ],
-  "version": "N6ydeEt0"
+  "version": "3z70O7M+"
 };
