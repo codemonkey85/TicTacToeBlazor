@@ -27,5 +27,5 @@
         <div id="square7" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square7"))">@Square7Content</div>
         <div id="square8" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square8"))">@Square8Content</div>
     </div>
-    <button @onclick="@ResetBoard">RESET BOARD</button>
+    <button class="btn btn-danger" @onclick="@ResetBoard">RESET BOARD</button>
 </div>
