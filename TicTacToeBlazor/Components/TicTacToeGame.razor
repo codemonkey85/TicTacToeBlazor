@@ -1,21 +1,21 @@
 ﻿<div class="container">
-    <h1>Tic-Tac-Toe</h1>
+    <h1 class="disable-select">Tic-Tac-Toe</h1>
     @if (!isGameOver)
     {
-        <h2>Current turn: @CurrentPlayerName</h2>
+        <h2 class="disable-select">Current turn: @CurrentPlayerName</h2>
     }
     @if (isGameOver)
     {
         @if (GameIsTied)
         {
-            <h2 style="color:red;">Game is tied!</h2>
+            <h2 class="disable-select tied-game">Game is tied!</h2>
         }
         else
         {
-            <h2 style="color:red;">Winner is @WinnerName!</h2>
+            <h2 class="disable-select tied-game">Winner is @WinnerName!</h2>
         }
     }
-    <h2>Number of turns so far: @turnNumber</h2>
+    <h2 class="disable-select">Number of turns so far: @turnNumber</h2>
     <div class="play-area">
         <div id="square0" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square0"))">@Square0Content</div>
         <div id="square1" disabled="@isGameOver" class="square" @onclick="@(() => SquareClicked("square1"))">@Square1Content</div>
