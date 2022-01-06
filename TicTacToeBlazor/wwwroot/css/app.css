@@ -70,6 +70,18 @@ div.main {
     color: red;
 }
 
+.disable-select {
+    user-select: none;
+}
+
+.tied-game {
+    color: red;
+}
+
+.game-over {
+    color: red;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
