@@ -2,7 +2,7 @@
 
 public partial class TicTacToeGame
 {
-    int turnNumber = 0;
+    private int turnNumber = 0;
     private bool isGameOver = false;
     private string WinnerName = string.Empty;
 
