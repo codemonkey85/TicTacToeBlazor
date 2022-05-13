@@ -9,17 +9,20 @@ public partial class TicTacToeGame
     private bool IsXturn => turnNumber % 2 == 0;
     private bool GameIsTied = false;
 
-    private string Square0Content { get; set; }
-    private string Square1Content { get; set; }
-    private string Square2Content { get; set; }
-    private string Square3Content { get; set; }
-    private string Square4Content { get; set; }
-    private string Square5Content { get; set; }
-    private string Square6Content { get; set; }
-    private string Square7Content { get; set; }
-    private string Square8Content { get; set; }
+    private string Square0Content { get; set; } = string.Empty;
+    private string Square1Content { get; set; } = string.Empty;
+    private string Square2Content { get; set; } = string.Empty;
+    private string Square3Content { get; set; } = string.Empty;
+    private string Square4Content { get; set; } = string.Empty;
+    private string Square5Content { get; set; } = string.Empty;
+    private string Square6Content { get; set; } = string.Empty;
+    private string Square7Content { get; set; } = string.Empty;
+    private string Square8Content { get; set; } = string.Empty;
 
-    public string CurrentPlayerName => IsXturn ? "X" : "O";
+    private const string X = "X";
+    private const string O = "O";
+
+    public string CurrentPlayerName => IsXturn ? X : O;
 
     public void SquareClicked(string squareId)
     {
@@ -62,21 +65,117 @@ public partial class TicTacToeGame
     }
 
     private void CheckIsGameOver() => isGameOver =
-        CheckWinningCondition(Square0Content, Square1Content, Square2Content) ||
-        CheckWinningCondition(Square3Content, Square4Content, Square5Content) ||
-        CheckWinningCondition(Square6Content, Square7Content, Square8Content) ||
-        CheckWinningCondition(Square0Content, Square3Content, Square6Content) ||
-        CheckWinningCondition(Square1Content, Square4Content, Square7Content) ||
-        CheckWinningCondition(Square2Content, Square5Content, Square8Content) ||
-        CheckWinningCondition(Square0Content, Square4Content, Square8Content) ||
-        CheckWinningCondition(Square2Content, Square4Content, Square6Content);
+        (
+            Square0Content, Square1Content, Square2Content,
+            Square3Content, Square4Content, Square5Content,
+            Square6Content, Square7Content, Square8Content
+        ) switch
+        {
+            (
+                X, X, X,
+                _, _, _,
+                _, _, _
 
-    private static bool CheckWinningCondition(string square1, string square2, string square3) =>
-        !string.IsNullOrEmpty(square1) &&
-        !string.IsNullOrEmpty(square2) &&
-        !string.IsNullOrEmpty(square3) &&
-        string.Equals(square1, square2) &&
-        string.Equals(square1, square3);
+            ) or (
+
+                O, O, O,
+                _, _, _,
+                _, _, _
+
+            ) => true,
+
+            (
+                _, _, _,
+                X, X, X,
+                _, _, _
+
+            ) or (
+
+                _, _, _,
+                O, O, O,
+                _, _, _
+
+            ) => true,
+
+            (
+                _, _, _,
+                _, _, _,
+                X, X, X
+
+            ) or (
+
+                _, _, _,
+                _, _, _,
+                O, O, O
+
+            ) => true,
+
+            (
+                X, _, _,
+                _, X, _,
+                _, _, X
+
+            ) or (
+
+                O, _, _,
+                _, O, _,
+                _, _, O
+
+            ) => true,
+            (
+                _, _, X,
+                _, X, _,
+                X, _, _
+
+            ) or (
+
+                _, _, O,
+                _, O, _,
+                O, _, _
+
+            ) => true,
+
+            (
+                X, _, _,
+                X, _, _,
+                X, _, _
+
+            ) or (
+
+                O, _, _,
+                O, _, _,
+                O, _, _
+
+            ) => true,
+
+            (
+                _, X, _,
+                _, X, _,
+                _, X, _
+
+            ) or (
+
+                _, O, _,
+                _, O, _,
+                _, O, _
+
+            ) => true,
+
+            (
+                _, _, X,
+                _, _, X,
+                _, _, X
+
+            ) or (
+
+                _, _, O,
+                _, _, O,
+                _, _, O
+
+            ) => true,
+
+            _ => false,
+        };
 
     public void ResetBoard()
     {
