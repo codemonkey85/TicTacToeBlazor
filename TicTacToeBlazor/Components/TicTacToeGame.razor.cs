@@ -43,7 +43,7 @@ public partial class TicTacToeGame
             "square7" => !string.IsNullOrWhiteSpace(Square7Content) ? null : Square7Content = CurrentPlayerName,
             "square8" => !string.IsNullOrWhiteSpace(Square8Content) ? null : Square8Content = CurrentPlayerName,
             _ => null,
-        } == null)
+        } is null)
         {
             return;
         }
@@ -75,105 +75,82 @@ public partial class TicTacToeGame
                 X, X, X,
                 _, _, _,
                 _, _, _
-
-            ) or (
-
+            ) or
+            (
                 O, O, O,
                 _, _, _,
                 _, _, _
-
-            ) => true,
-
+            ) or
             (
                 _, _, _,
                 X, X, X,
                 _, _, _
-
-            ) or (
-
+            ) or
+            (
                 _, _, _,
                 O, O, O,
                 _, _, _
-
-            ) => true,
-
+            ) or
             (
                 _, _, _,
                 _, _, _,
                 X, X, X
-
-            ) or (
-
+            ) or
+            (
                 _, _, _,
                 _, _, _,
                 O, O, O
-
-            ) => true,
-
+            ) or
             (
                 X, _, _,
                 _, X, _,
                 _, _, X
-
-            ) or (
-
+            ) or
+            (
                 O, _, _,
                 _, O, _,
                 _, _, O
-
-            ) => true,
+            ) or
             (
                 _, _, X,
                 _, X, _,
                 X, _, _
-
-            ) or (
-
+            ) or
+            (
                 _, _, O,
                 _, O, _,
                 O, _, _
-
-            ) => true,
-
+            ) or
             (
                 X, _, _,
                 X, _, _,
                 X, _, _
-
-            ) or (
-
+            ) or
+            (
                 O, _, _,
                 O, _, _,
                 O, _, _
-
-            ) => true,
-
+            ) or
             (
                 _, X, _,
                 _, X, _,
                 _, X, _
-
-            ) or (
-
+            ) or
+            (
                 _, O, _,
                 _, O, _,
                 _, O, _
-
-            ) => true,
-
+            ) or
             (
                 _, _, X,
                 _, _, X,
                 _, _, X
-
-            ) or (
-
+            ) or
+            (
                 _, _, O,
                 _, _, O,
                 _, _, O
-
             ) => true,
-
             _ => false,
         };
 
