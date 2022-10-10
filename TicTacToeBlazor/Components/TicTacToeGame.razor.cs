@@ -2,12 +2,12 @@
 
 public partial class TicTacToeGame
 {
-    private int turnNumber = 0;
-    private bool isGameOver = false;
-    private string WinnerName = string.Empty;
+    private int _turnNumber = 0;
+    private bool _isGameOver = false;
+    private string _winnerName = string.Empty;
 
-    private bool IsXturn => turnNumber % 2 == 0;
-    private bool GameIsTied = false;
+    private bool IsXturn => _turnNumber % 2 == 0;
+    private bool _gameIsTied = false;
 
     private string Square0Content { get; set; } = string.Empty;
     private string Square1Content { get; set; } = string.Empty;
@@ -24,9 +24,9 @@ public partial class TicTacToeGame
 
     public string CurrentPlayerName => IsXturn ? X : O;
 
-    public void SquareClicked(string squareId)
+    public void Clicked(string squareId)
     {
-        if (isGameOver)
+        if (_isGameOver)
         {
             return;
         }
@@ -50,107 +50,107 @@ public partial class TicTacToeGame
 
         CheckIsGameOver();
 
-        if (isGameOver)
+        if (_isGameOver)
         {
-            WinnerName = CurrentPlayerName;
+            _winnerName = CurrentPlayerName;
         }
 
-        turnNumber++;
+        _turnNumber++;
 
-        if (!isGameOver && turnNumber == 9)
+        if (!_isGameOver && _turnNumber == 9)
         {
-            isGameOver = true;
-            GameIsTied = true;
+            _isGameOver = true;
+            _gameIsTied = true;
         }
     }
 
-    private void CheckIsGameOver() => isGameOver =
+    private void CheckIsGameOver() => _isGameOver =
         (
-            Square0Content, Square1Content, Square2Content,
-            Square3Content, Square4Content, Square5Content,
-            Square6Content, Square7Content, Square8Content
-        ) switch
+                Square0Content, Square1Content, Square2Content,
+                Square3Content, Square4Content, Square5Content,
+                Square6Content, Square7Content, Square8Content
+            ) switch
         {
             (
                 X, X, X,
                 _, _, _,
                 _, _, _
-            ) or
-            (
+                ) or
+                (
                 O, O, O,
                 _, _, _,
                 _, _, _
-            ) or
-            (
+                ) or
+                (
                 _, _, _,
                 X, X, X,
                 _, _, _
-            ) or
-            (
+                ) or
+                (
                 _, _, _,
                 O, O, O,
                 _, _, _
-            ) or
-            (
+                ) or
+                (
                 _, _, _,
                 _, _, _,
                 X, X, X
-            ) or
-            (
+                ) or
+                (
                 _, _, _,
                 _, _, _,
                 O, O, O
-            ) or
-            (
+                ) or
+                (
                 X, _, _,
                 _, X, _,
                 _, _, X
-            ) or
-            (
+                ) or
+                (
                 O, _, _,
                 _, O, _,
                 _, _, O
-            ) or
-            (
+                ) or
+                (
                 _, _, X,
                 _, X, _,
                 X, _, _
-            ) or
-            (
+                ) or
+                (
                 _, _, O,
                 _, O, _,
                 O, _, _
-            ) or
-            (
+                ) or
+                (
                 X, _, _,
                 X, _, _,
                 X, _, _
-            ) or
-            (
+                ) or
+                (
                 O, _, _,
                 O, _, _,
                 O, _, _
-            ) or
-            (
+                ) or
+                (
                 _, X, _,
                 _, X, _,
                 _, X, _
-            ) or
-            (
+                ) or
+                (
                 _, O, _,
                 _, O, _,
                 _, O, _
-            ) or
-            (
+                ) or
+                (
                 _, _, X,
                 _, _, X,
                 _, _, X
-            ) or
-            (
+                ) or
+                (
                 _, _, O,
                 _, _, O,
                 _, _, O
-            ) => true,
+                ) => true,
             _ => false,
         };
 
@@ -165,9 +165,9 @@ public partial class TicTacToeGame
         Square6Content =
         Square7Content =
         Square8Content = string.Empty;
-        turnNumber = 0;
-        isGameOver =
-        GameIsTied = false;
+        _turnNumber = 0;
+        _isGameOver =
+            _gameIsTied = false;
         StateHasChanged();
     }
 }

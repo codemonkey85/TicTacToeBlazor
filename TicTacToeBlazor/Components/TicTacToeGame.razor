@@ -1,31 +1,31 @@
 ﻿<div class="container">
     <h1 class="disable-select">Tic-Tac-Toe</h1>
-    @if (!isGameOver)
+    @if (!_isGameOver)
     {
         <h2 class="disable-select">Current turn: @CurrentPlayerName</h2>
     }
-    @if (isGameOver)
+    @if (_isGameOver)
     {
-        @if (GameIsTied)
+        @if (_gameIsTied)
         {
             <h2 class="disable-select tied-game">Game is tied!</h2>
         }
         else
         {
-            <h2 class="disable-select tied-game">Winner is @WinnerName!</h2>
+            <h2 class="disable-select tied-game">Winner is @_winnerName!</h2>
         }
     }
-    <h2 class="disable-select">Number of turns so far: @turnNumber</h2>
+    <h2 class="disable-select">Number of turns so far: @_turnNumber</h2>
     <div class="play-area">
-        <div id="square0" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square0"))">@Square0Content</div>
-        <div id="square1" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square1"))">@Square1Content</div>
-        <div id="square2" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square2"))">@Square2Content</div>
-        <div id="square3" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square3"))">@Square3Content</div>
-        <div id="square4" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square4"))">@Square4Content</div>
-        <div id="square5" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square5"))">@Square5Content</div>
-        <div id="square6" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square6"))">@Square6Content</div>
-        <div id="square7" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square7"))">@Square7Content</div>
-        <div id="square8" disabled="@isGameOver" class="square disable-select" @onclick="@(() => SquareClicked("square8"))">@Square8Content</div>
+        <div id="square0" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square0"))">@Square0Content</div>
+        <div id="square1" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square1"))">@Square1Content</div>
+        <div id="square2" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square2"))">@Square2Content</div>
+        <div id="square3" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square3"))">@Square3Content</div>
+        <div id="square4" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square4"))">@Square4Content</div>
+        <div id="square5" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square5"))">@Square5Content</div>
+        <div id="square6" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square6"))">@Square6Content</div>
+        <div id="square7" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square7"))">@Square7Content</div>
+        <div id="square8" disabled="@_isGameOver" class="square disable-select" @onclick="@(() => Clicked("square8"))">@Square8Content</div>
     </div>
     <button class="btn btn-danger" @onclick="@ResetBoard">RESET BOARD</button>
 </div>
