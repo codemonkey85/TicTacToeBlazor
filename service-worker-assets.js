@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-lZs4Zv9jVrfTCIz2+1n3CiAjFJdLHPCWap0BIFg4Nxo=",
+      "hash": "sha256-xCytP8PuKuRzpN\/LU1YxlN2M8kgFDDxzjQoQih4ZjA8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -161,7 +161,7 @@
       "url": "_framework\/System.Transactions.Local.dll"
     },
     {
-      "hash": "sha256-Rz0kP0YAfaVa3PKP0u4Ap+OolJHQow\/fg2Q9zjqthNw=",
+      "hash": "sha256-JJUr69Jm\/EwrF5ayNYC\/tNCr2WBoRF10DHMWtrQlbF8=",
       "url": "_framework\/TicTacToeBlazor.dll"
     },
     {
@@ -237,5 +237,5 @@
       "url": "routes.json"
     }
   ],
-  "version": "H\/HWOci0"
+  "version": "Ew4M02JT"
 };
