@@ -2,12 +2,12 @@
 
 public partial class TicTacToeGame
 {
-    private int _turnNumber = 0;
-    private bool _isGameOver = false;
-    private string _winnerName = string.Empty;
+    private int turnNumber = 0;
+    private bool isGameOver = false;
+    private string winnerName = string.Empty;
 
-    private bool IsXturn => _turnNumber % 2 == 0;
-    private bool _gameIsTied = false;
+    private bool IsXturn => turnNumber % 2 == 0;
+    private bool gameIsTied = false;
 
     private string Square0Content { get; set; } = string.Empty;
     private string Square1Content { get; set; } = string.Empty;
@@ -22,11 +22,11 @@ public partial class TicTacToeGame
     private const string X = "X";
     private const string O = "O";
 
-    public string CurrentPlayerName => IsXturn ? X : O;
+    private string CurrentPlayerName => IsXturn ? X : O;
 
-    public void Clicked(string squareId)
+    private void Clicked(string squareId)
     {
-        if (_isGameOver)
+        if (isGameOver)
         {
             return;
         }
@@ -50,21 +50,23 @@ public partial class TicTacToeGame
 
         CheckIsGameOver();
 
-        if (_isGameOver)
+        if (isGameOver)
         {
-            _winnerName = CurrentPlayerName;
+            winnerName = CurrentPlayerName;
         }
 
-        _turnNumber++;
+        turnNumber++;
 
-        if (!_isGameOver && _turnNumber == 9)
+        if (isGameOver || turnNumber != 9)
         {
-            _isGameOver = true;
-            _gameIsTied = true;
+            return;
         }
+
+        isGameOver = true;
+        gameIsTied = true;
     }
 
-    private void CheckIsGameOver() => _isGameOver =
+    private void CheckIsGameOver() => isGameOver =
         (
                 Square0Content, Square1Content, Square2Content,
                 Square3Content, Square4Content, Square5Content,
@@ -154,7 +156,7 @@ public partial class TicTacToeGame
             _ => false,
         };
 
-    public void ResetBoard()
+    private void ResetBoard()
     {
         Square0Content =
         Square1Content =
@@ -165,9 +167,9 @@ public partial class TicTacToeGame
         Square6Content =
         Square7Content =
         Square8Content = string.Empty;
-        _turnNumber = 0;
-        _isGameOver =
-            _gameIsTied = false;
+        turnNumber = 0;
+        isGameOver =
+            gameIsTied = false;
         StateHasChanged();
     }
 }
