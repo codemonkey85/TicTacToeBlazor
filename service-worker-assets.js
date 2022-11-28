@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-OrliijSyznO2JJNayWJEewg\/hEcAk6SR1CnR0ZfWyVQ=",
+      "hash": "sha256-bncGZKLiBABNb+gqozhoAv4nrKdKo1ud106q5iQKZfM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -137,15 +137,15 @@
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-R6cdwRv1AyNZy4Zk9GlD\/NJZva19hvKurWcSBfnMPyw=",
+      "hash": "sha256-qyJw7bf5NCO4ZvFliNiKJ5mwBYblf5r0\/ERMspfKUKY=",
       "url": "_framework\/TicTacToeBlazor.dll"
     },
     {
-      "hash": "sha256-7fMmwjuIa92rXQ40ier8kt1fm4YNJh84Uk\/OyVeQeKM=",
+      "hash": "sha256-b2DPRftUQxm1RvbLMaAj4XniXew5BFV7xmX4eyK6+oE=",
       "url": "TicTacToeBlazor.styles.css"
     },
     {
-      "hash": "sha256-UTj2O\/Z\/nNLRI\/PaXImXqp57151KGnejsJefAu+tlOc=",
+      "hash": "sha256-MMzHmZT\/DGj6LZrsyGigISLwnxDv+iM0WfzxxMkIcas=",
       "url": "css\/app.css"
     },
     {
@@ -201,7 +201,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-xIocblh/W69jQ63KXXMWKRYHi0ayzh8APsyOBM6jrZQ=",
+      "hash": "sha256-/0FiDqm8O/2xhniv0Hjge/heBJrqRCtAkmKwb4llrLs=",
       "url": "index.html"
     },
     {
@@ -213,5 +213,5 @@
       "url": "routes.json"
     }
   ],
-  "version": "pi4BQlHG"
+  "version": "kj1KZmbQ"
 };
