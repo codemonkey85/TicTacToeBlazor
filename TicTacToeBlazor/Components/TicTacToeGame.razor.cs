@@ -2,6 +2,19 @@
 
 public partial class TicTacToeGame
 {
+    private const string X = "X";
+    private const string O = "O";
+
+    private const string Square0Id = "square0";
+    private const string Square1Id = "square1";
+    private const string Square2Id = "square2";
+    private const string Square3Id = "square3";
+    private const string Square4Id = "square4";
+    private const string Square5Id = "square5";
+    private const string Square6Id = "square6";
+    private const string Square7Id = "square7";
+    private const string Square8Id = "square8";
+
     private int turnNumber = 0;
     private bool isGameOver = false;
     private string winnerName = string.Empty;
@@ -19,9 +32,6 @@ public partial class TicTacToeGame
     private string Square7Content { get; set; } = string.Empty;
     private string Square8Content { get; set; } = string.Empty;
 
-    private const string X = "X";
-    private const string O = "O";
-
     private string CurrentPlayerName => IsXturn ? X : O;
 
     private void Clicked(string squareId)
@@ -33,15 +43,15 @@ public partial class TicTacToeGame
 
         if (squareId switch
         {
-            "square0" => !string.IsNullOrWhiteSpace(Square0Content) ? null : Square0Content = CurrentPlayerName,
-            "square1" => !string.IsNullOrWhiteSpace(Square1Content) ? null : Square1Content = CurrentPlayerName,
-            "square2" => !string.IsNullOrWhiteSpace(Square2Content) ? null : Square2Content = CurrentPlayerName,
-            "square3" => !string.IsNullOrWhiteSpace(Square3Content) ? null : Square3Content = CurrentPlayerName,
-            "square4" => !string.IsNullOrWhiteSpace(Square4Content) ? null : Square4Content = CurrentPlayerName,
-            "square5" => !string.IsNullOrWhiteSpace(Square5Content) ? null : Square5Content = CurrentPlayerName,
-            "square6" => !string.IsNullOrWhiteSpace(Square6Content) ? null : Square6Content = CurrentPlayerName,
-            "square7" => !string.IsNullOrWhiteSpace(Square7Content) ? null : Square7Content = CurrentPlayerName,
-            "square8" => !string.IsNullOrWhiteSpace(Square8Content) ? null : Square8Content = CurrentPlayerName,
+            Square0Id => !string.IsNullOrWhiteSpace(Square0Content) ? null : Square0Content = CurrentPlayerName,
+            Square1Id => !string.IsNullOrWhiteSpace(Square1Content) ? null : Square1Content = CurrentPlayerName,
+            Square2Id => !string.IsNullOrWhiteSpace(Square2Content) ? null : Square2Content = CurrentPlayerName,
+            Square3Id => !string.IsNullOrWhiteSpace(Square3Content) ? null : Square3Content = CurrentPlayerName,
+            Square4Id => !string.IsNullOrWhiteSpace(Square4Content) ? null : Square4Content = CurrentPlayerName,
+            Square5Id => !string.IsNullOrWhiteSpace(Square5Content) ? null : Square5Content = CurrentPlayerName,
+            Square6Id => !string.IsNullOrWhiteSpace(Square6Content) ? null : Square6Content = CurrentPlayerName,
+            Square7Id => !string.IsNullOrWhiteSpace(Square7Content) ? null : Square7Content = CurrentPlayerName,
+            Square8Id => !string.IsNullOrWhiteSpace(Square8Content) ? null : Square8Content = CurrentPlayerName,
             _ => null,
         } is null)
         {
