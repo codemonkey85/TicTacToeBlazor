@@ -1,79 +1,102 @@
-﻿* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    min-height: 100vh;
+﻿.game-container {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: var(--tic-tac-toe-container);
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/*button {
-    color: var(--link);
-    outline: none;
-    border: 4px solid green;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: none;
-    transition: all 0.2s ease-in-out;
-}
-
-    button:hover {
-        cursor: pointer;
-        background: green;
-        color: white;
-    }
-*/
-.play-area {
-    display: grid;
+#gameboard {
     width: 300px;
     height: 300px;
-    grid-template-columns: auto auto auto;
-    margin: 5px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
-    display: flex;
     width: 100px;
     height: 100px;
-    align-items: center;
+    background-color: white;
+    border: solid 3px black;
+    box-sizing: border-box;
+    display: flex;
     justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    border: 3px solid var(--tic-tac-toe-borders);
+    align-items: center;
     transition: background 0.2s ease-in-out;
 }
 
     .square:hover {
         cursor: pointer;
-        background: #0ff30f;
+        background-color: lightgray;
     }
 
-#square0,
-#square1,
-#square2 {
+.O {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.X {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+    .X:before, .X:after {
+        content: "";
+        position: absolute;
+        background-color: red;
+    }
+
+    .X:before {
+        left: 55%;
+        width: 25%;
+        margin-left: -20%;
+        height: 95%;
+    }
+
+    .X:after {
+        top: 55%;
+        height: 25%;
+        margin-top: -20%;
+        width: 95%;
+    }
+
+button {
+    margin: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+#square0, #square1, #square2 {
     border-top: none;
 }
 
-#square0,
-#square3,
-#square6 {
+#square0, #square3, #square6 {
     border-left: none;
 }
 
-#square6,
-#square7,
-#square8 {
+#square6, #square7, #square8 {
     border-bottom: none;
 }
 
-#square2,
-#square5,
-#square8 {
+#square2, #square5, #square8 {
     border-right: none;
+}
+
+h3.game-over {
+    color: red;
+    font-weight: bold;
+}
+
+span.number-of-turns {
+    font-size: larger;
 }
