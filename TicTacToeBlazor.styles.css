@@ -1,80 +1,103 @@
 /* /Components/TicTacToeGame.razor.rz.scp.css */
-*[b-8fmlm1fyvp] {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container[b-8fmlm1fyvp] {
-    min-height: 100vh;
+.game-container[b-8fmlm1fyvp] {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background: var(--tic-tac-toe-container);
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
-/*button {
-    color: var(--link);
-    outline: none;
-    border: 4px solid green;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: none;
-    transition: all 0.2s ease-in-out;
-}
-
-    button:hover {
-        cursor: pointer;
-        background: green;
-        color: white;
-    }
-*/
-.play-area[b-8fmlm1fyvp] {
-    display: grid;
+#gameboard[b-8fmlm1fyvp] {
     width: 300px;
     height: 300px;
-    grid-template-columns: auto auto auto;
-    margin: 5px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square[b-8fmlm1fyvp] {
-    display: flex;
     width: 100px;
     height: 100px;
-    align-items: center;
+    background-color: white;
+    border: solid 3px black;
+    box-sizing: border-box;
+    display: flex;
     justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
-    border: 3px solid var(--tic-tac-toe-borders);
+    align-items: center;
     transition: background 0.2s ease-in-out;
 }
 
     .square:hover[b-8fmlm1fyvp] {
         cursor: pointer;
-        background: #0ff30f;
+        background-color: lightgray;
     }
 
-#square0[b-8fmlm1fyvp],
-#square1[b-8fmlm1fyvp],
-#square2[b-8fmlm1fyvp] {
+.O[b-8fmlm1fyvp] {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.X[b-8fmlm1fyvp] {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+    .X[b-8fmlm1fyvp]:before, .X[b-8fmlm1fyvp]:after {
+        content: "";
+        position: absolute;
+        background-color: red;
+    }
+
+    .X[b-8fmlm1fyvp]:before {
+        left: 55%;
+        width: 25%;
+        margin-left: -20%;
+        height: 95%;
+    }
+
+    .X[b-8fmlm1fyvp]:after {
+        top: 55%;
+        height: 25%;
+        margin-top: -20%;
+        width: 95%;
+    }
+
+button[b-8fmlm1fyvp] {
+    margin: 5px;
+}
+
+p[b-8fmlm1fyvp] {
+    text-align: center;
+}
+
+#square0[b-8fmlm1fyvp], #square1[b-8fmlm1fyvp], #square2[b-8fmlm1fyvp] {
     border-top: none;
 }
 
-#square0[b-8fmlm1fyvp],
-#square3[b-8fmlm1fyvp],
-#square6[b-8fmlm1fyvp] {
+#square0[b-8fmlm1fyvp], #square3[b-8fmlm1fyvp], #square6[b-8fmlm1fyvp] {
     border-left: none;
 }
 
-#square6[b-8fmlm1fyvp],
-#square7[b-8fmlm1fyvp],
-#square8[b-8fmlm1fyvp] {
+#square6[b-8fmlm1fyvp], #square7[b-8fmlm1fyvp], #square8[b-8fmlm1fyvp] {
     border-bottom: none;
 }
 
-#square2[b-8fmlm1fyvp],
-#square5[b-8fmlm1fyvp],
-#square8[b-8fmlm1fyvp] {
+#square2[b-8fmlm1fyvp], #square5[b-8fmlm1fyvp], #square8[b-8fmlm1fyvp] {
     border-right: none;
+}
+
+h3.game-over[b-8fmlm1fyvp] {
+    color: red;
+    font-weight: bold;
+}
+
+span.number-of-turns[b-8fmlm1fyvp] {
+    font-size: larger;
 }
