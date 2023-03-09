@@ -68,10 +68,10 @@ public partial class TicTacToeGame
             if (marks.All(m => m is X) || marks.All(m => m is O))
             {
                 isGameOver = true;
-                break;
+                return;
             }
         }
-        if (!squares.Values.Any(mark => mark is { Length: 0 }))
+        if (squares.Values.All(mark => mark is { Length: > 0 }))
         {
             isGameTied = true;
             isGameOver = true;
