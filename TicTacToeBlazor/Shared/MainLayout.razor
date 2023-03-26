@@ -1,12 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider />
+<MudThemeProvider @ref="@mudThemeProvider"
+                  @bind-IsDarkMode="@isDarkMode" />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
     <MudAppBar>
         Tic Tac Toe Blazor
+        <MudSpacer />
+        <MudSwitch @bind-Checked="@isDarkMode"
+                   Color="Color.Primary"
+                   Label="@(isDarkMode ? "Dark" : "Light")" />
     </MudAppBar>
     <MudContainer MaxWidth="MaxWidth.False">
         @Body
