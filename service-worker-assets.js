@@ -49,7 +49,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-wWYoWKEEObAJRTHdfLXijVfpapDW8MHVSFbDLlph6l4=",
+      "hash": "sha256-xTFHanBT1elzZsQ\/5ay28yEMfVj8nNvch0Z+oWIt800=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -57,7 +57,11 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.dll"
     },
     {
-      "hash": "sha256-pqWfqizjzoibzGfJDQa+vv2rop8jIaHnFdI7JIQyc4E=",
+      "hash": "sha256-SJ4bhzKS+xsplXfsK5muYlmj5VGpJ5CRHzQiCzYrTSg=",
+      "url": "_framework\/Microsoft.AspNetCore.Components.Forms.dll"
+    },
+    {
+      "hash": "sha256-\/V1DnC5IQ4DZBAaTBS\/FLiEUivawQaYIO81HIn6IK98=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.dll"
     },
     {
@@ -77,7 +81,7 @@
       "url": "_framework\/Microsoft.Extensions.Configuration.Json.dll"
     },
     {
-      "hash": "sha256-Qz6Pfbp+C03VgwDVQDP7dyZrhGVZzTiAlsAsbeQJ7cA=",
+      "hash": "sha256-IY\/1dro\/Vxqh17I1rQP5NDsWZKL008VZv8m1xciSUzI=",
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
@@ -85,7 +89,7 @@
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "hash": "sha256-gQlTw8CxsFx37gDZkuIw6Y3qtZ+Vw3Z+RBSBSc+PbLc=",
+      "hash": "sha256-4Ji88Rjx5xioma70if5Vx2xZjLh1rOlddpbuY8u\/Zu0=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
@@ -109,16 +113,20 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-rlJkRxAUS1gT6RifDLdxbmRqCHLJ8d0OPwE5v57caUA=",
+      "hash": "sha256-yDeIxokx+MJsqhOMAz1KkiZj0YT237so+hPamjZjQ2A=",
       "url": "_framework\/MudBlazor.dll"
     },
     {
-      "hash": "sha256-9DglTMV4HFO1UQswMwvZ+NW1vTy2xXlRFLDcevHQbRA=",
+      "hash": "sha256-1+mUvJ\/mpbmqg+jCwWm1bspqy0E0w\/EUL4\/a35IY7Cs=",
       "url": "_framework\/System.Collections.Concurrent.dll"
     },
     {
-      "hash": "sha256-Ggmq88HSkwWH8at2RSPbYhKLBxXPthVO6WRz0sIffXI=",
+      "hash": "sha256-lnUrNbvuRd4WIpfSRkzgpnsMckhGQgN57gV2pn\/MqNE=",
       "url": "_framework\/System.Collections.dll"
+    },
+    {
+      "hash": "sha256-Sf+5ylEEMjvxppfm5GL2t9S1nLoHB5qZDVua4d\/w75g=",
+      "url": "_framework\/System.ComponentModel.Annotations.dll"
     },
     {
       "hash": "sha256-SQWBEnKAV\/J2jOPx2Nq2GToL26u1xo5eYazE0h0rqv0=",
@@ -133,8 +141,12 @@
       "url": "_framework\/System.Console.dll"
     },
     {
-      "hash": "sha256-lpRaR3luU3Bpiahl2i8tyLTpg5iiwYJzuAPdLodk9w8=",
+      "hash": "sha256-bww9tQJmMgst3Ml2zV\/AASN4nQESoQuxofiHLrT6KpI=",
       "url": "_framework\/System.Linq.dll"
+    },
+    {
+      "hash": "sha256-S81tx8rengD0gzarsUZVi4cmDIBDXohhbtLBG1B4m+g=",
+      "url": "_framework\/System.Linq.Expressions.dll"
     },
     {
       "hash": "sha256-b26fohRveXStPqJCJLDdbd9E3BSWE+vpXJsdT8UjC6U=",
@@ -145,7 +157,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-s\/ENBZlrwc1cRFcbP0+8sAsNKxqNPBDqG4lexXGo25Y=",
+      "hash": "sha256-sMhvTMZSZwORsBX2gLNYaHKxqslymU3FCb7qFzqMZmk=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -153,11 +165,11 @@
       "url": "_framework\/System.Private.Uri.dll"
     },
     {
-      "hash": "sha256-eBlW9SmOyJDFMsZ6secNuTOM9mivaeJKxH87WAE56CY=",
+      "hash": "sha256-2MUt2jVA0o9hj8sIKKymd52rmDF7+OlyTVSS0s9kAco=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
-      "hash": "sha256-RMaiGWTNZhcoxkeHUN4oUzSf7Ty3H\/XBgiTt9Lx0qZI=",
+      "hash": "sha256-EW\/sh4lx1mU9kI+fQI0mR2uAbvhdrF6sYKvoCTR1Qqc=",
       "url": "_framework\/System.Runtime.InteropServices.JavaScript.dll"
     },
     {
@@ -165,11 +177,11 @@
       "url": "_framework\/System.Text.Encodings.Web.dll"
     },
     {
-      "hash": "sha256-XPziNEPX4\/kI1lCdD0uKo3lYqgk440m945uGzMWHrIU=",
+      "hash": "sha256-4Byoz+dBtdySIXCfxT164CYgcKrfhL+gsl7ZM\/9JED0=",
       "url": "_framework\/System.Text.Json.dll"
     },
     {
-      "hash": "sha256-Fan\/HezYH5CIuTOsco3uLcNdVM44UVMkxJ36rYH7Jf8=",
+      "hash": "sha256-tEU5iba6FzbNZ6jX0kFvQCxeOqF05fQ4SfdChNRC4Gc=",
       "url": "_framework\/TicTacToeBlazor.dll"
     },
     {
@@ -185,5 +197,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "aLmRMZfJ"
+  "version": "DLfsGixv"
 };
