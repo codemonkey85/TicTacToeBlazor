@@ -1,5 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<main>
-    @Body
-</main>
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        Tic Tac Toe Blazor
+    </MudAppBar>
+    <MudContainer MaxWidth="MaxWidth.False">
+        @Body
+    </MudContainer>
+</MudLayout>

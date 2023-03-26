@@ -1,6 +1,5 @@
 ﻿<div class="game-container">
-    <h1>Tic-Tac-Toe</h1>
-    <p>
+    <p class="mb-4">
         <h3 class="@(isGameOver ? "game-over" : string.Empty)">
             @info
         </h3>
@@ -8,6 +7,7 @@
             Number of turns taken: @numberOfTurns
         </span>
     </p>
+
     <div id="gameboard">
         @for (int i = 0; i < 9; ++i)
         {
@@ -20,10 +20,12 @@
             </div>
         }
     </div>
-    <button type="button"
-            class="btn btn-danger"
-            disabled="@(numberOfTurns == 0)"
-            @onclick="@ResetBoard">
+
+    <MudButton Variant="@Variant.Filled"
+               Color="@Color.Error"
+               Disabled="@(numberOfTurns == 0)"
+               OnClick="@ResetBoard"
+               Class="mt-4">
         Reset Board
-    </button>
+    </MudButton>
 </div>
