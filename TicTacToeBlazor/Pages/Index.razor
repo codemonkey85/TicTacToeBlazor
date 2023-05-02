@@ -1,3 +1,46 @@
 ﻿@page "/"
 
-<TicTacToeGame />
+<MudText>
+    Choose the game mode you want to play:
+</MudText>
+
+<MudSelect T="GameMode" @bind-Value="@gameMode">
+    @foreach (GameMode gameMode in Enum.GetValues(typeof(GameMode)))
+    {
+        <MudSelectItem Value="@gameMode">
+            @gameMode
+        </MudSelectItem>
+    }
+</MudSelect>
+
+@switch (gameMode)
+{
+    case GameMode.Game3x3:
+        <TicTacToeGame3x3 />
+        break;
+    case GameMode.Game4x4:
+        <TicTacToeGame4x4 />
+        break;
+}
+
+@code {
+    private GameMode gameMode = GameMode.Game3x3;
+
+    private enum GameMode
+    {
+        Game3x3,
+        Game4x4,
+        Game5x5,
+        //Game6x6,
+        //Game7x7,
+        //Game8x8,
+        //Game9x9,
+        //Game10x10,
+        //Game11x11,
+        //Game12x12,
+        //Game13x13,
+        //Game14x14,
+        //Game15x15,
+        //Game16x16,
+    }
+}

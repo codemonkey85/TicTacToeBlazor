@@ -1,0 +1,31 @@
+﻿<div class="game-container">
+    <p class="mb-4">
+        <h3 class="@(isGameOver ? "game-over" : string.Empty)">
+            @info
+        </h3>
+        <span class="number-of-turns">
+            Number of turns taken: @numberOfTurns
+        </span>
+    </p>
+
+    <div id="gameboard">
+        @for (int i = 0; i < 16; ++i)
+        {
+            var key = squares.Keys.FirstOrDefault(k => k == i);
+            <div class="square"
+                 id="@($"square{key}")"
+                 @onclick="@(_ => TakeTurn(key))">
+                <div class="@squares[i]">
+                </div>
+            </div>
+        }
+    </div>
+
+    <MudButton Variant="@Variant.Filled"
+               Color="@Color.Error"
+               Disabled="@(numberOfTurns == 0)"
+               OnClick="@ResetBoard"
+               Class="mt-4">
+        Reset Board
+    </MudButton>
+</div>

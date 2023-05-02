@@ -1,0 +1,102 @@
+﻿.game-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#gameboard {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: solid 3px black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease-in-out;
+}
+
+    .square:hover {
+        cursor: pointer;
+        background-color: lightgray;
+    }
+
+.O {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 15px solid blue;
+    box-sizing: border-box;
+}
+
+.X {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+    .X:before, .X:after {
+        content: "";
+        position: absolute;
+        background-color: red;
+    }
+
+    .X:before {
+        left: 55%;
+        width: 25%;
+        margin-left: -20%;
+        height: 95%;
+    }
+
+    .X:after {
+        top: 55%;
+        height: 25%;
+        margin-top: -20%;
+        width: 95%;
+    }
+
+button {
+    margin: 5px;
+}
+
+p {
+    text-align: center;
+}
+
+#square0, #square1, #square2 {
+    border-top: none;
+}
+
+#square0, #square3, #square6 {
+    border-left: none;
+}
+
+#square6, #square7, #square8 {
+    border-bottom: none;
+}
+
+#square2, #square5, #square8 {
+    border-right: none;
+}
+
+h3.game-over {
+    color: red;
+    font-weight: bold;
+}
+
+span.number-of-turns {
+    font-size: larger;
+}
