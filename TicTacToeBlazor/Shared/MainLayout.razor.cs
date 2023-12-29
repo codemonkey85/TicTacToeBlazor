@@ -2,6 +2,8 @@ namespace TicTacToeBlazor.Shared;
 
 public partial class MainLayout
 {
+    private const string AppTitle = "Tic Tac Toe Blazor";
+
     private bool isDarkMode;
     private MudThemeProvider? mudThemeProvider;
 
