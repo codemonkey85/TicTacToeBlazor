@@ -1,6 +1,6 @@
 {
-  "name": "TicTacToeBlazor",
-  "short_name": "TicTacToeBlazor",
+  "name": "Tic Tac Toe",
+  "short_name": "TicTacToe",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

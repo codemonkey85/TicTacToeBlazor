@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-+j9nuMp4Blup6VPP8LLWuwJRvO3tCSlzcjbzxMVhvGc=",
+      "hash": "sha256-XKElyRfyOw47AN3gcnQOOitgb\/LJoG6Fqk2SN7HE1HE=",
       "url": "css\/app.css"
     },
     {
@@ -9,11 +9,11 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-4WjS9/DXhCVLrQxdTuvJTf5g6z8haCs3orupgFydkdg=",
+      "hash": "sha256-EImm35WsQg6m3vP2ywr03bqmiI95aq//GUFH4YADeKA=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-NUXDpiHn2rpU\/GgSvEYYe4r+rFly4B5V3Y3lio9SeiQ=",
+      "hash": "sha256-vf7yqX2CSJ2wS6rY309P8lJQY6CUcMo3sX4+BYJN+fU=",
       "url": "manifest.json"
     },
     {
@@ -49,7 +49,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-uvGYXWkfpvADrLvFWimSeD9Bo\/ppxS5q3KFYlpdqxh8=",
+      "hash": "sha256-NyHaRGz55\/RKueBdBU0ZXoG49xvkwO2LYSuOLbmV79Q=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -197,7 +197,7 @@
       "url": "_framework\/System.Text.RegularExpressions.wasm"
     },
     {
-      "hash": "sha256-55JlliJJpkJgtYkv6IVnqKrXrl6KL5+NCAjTZDLZdWQ=",
+      "hash": "sha256-Vp\/hl2exMDFqKosDZuxOF1OxW5mHpQDgX+4CtNdzwGY=",
       "url": "_framework\/TicTacToeBlazor.wasm"
     },
     {
@@ -213,5 +213,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "qbV5Ob5G"
+  "version": "\/wrCU\/Eg"
 };
