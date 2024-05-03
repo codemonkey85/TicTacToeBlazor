@@ -4,11 +4,15 @@ public partial class TicTacToeGame
 {
     private const string X = nameof(X);
     private const string O = nameof(O);
+
     private string currentTurn = O;
     private int numberOfTurns = 0;
+
     private bool isGameOver = false;
     private bool isGameTied = false;
+
     private string info = $"{O} goes first";
+
     private readonly IDictionary<int, string> squares = new Dictionary<int, string>
     {
         [0] = string.Empty,
@@ -21,17 +25,18 @@ public partial class TicTacToeGame
         [7] = string.Empty,
         [8] = string.Empty,
     };
-    private readonly int[][] winningCombos = new int[][]
-    {
-        new int[] { 0, 1, 2 },
-        new int[] { 3, 4, 5 },
-        new int[] { 6, 7, 8 },
-        new int[] { 0, 3, 6 },
-        new int[] { 1, 4, 7 },
-        new int[] { 2, 5, 8 },
-        new int[] { 0, 4, 8 },
-        new int[] { 2, 4, 6 },
-    };
+
+    private readonly int[][] winningCombos =
+    [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
 
     private void TakeTurn(int id)
     {
@@ -65,12 +70,14 @@ public partial class TicTacToeGame
         foreach (var combo in winningCombos)
         {
             var marks = combo.Select(i => squares[i]);
+
             if (marks.All(m => m is X) || marks.All(m => m is O))
             {
                 isGameOver = true;
                 return;
             }
         }
+
         if (squares.Values.All(mark => mark is { Length: > 0 }))
         {
             isGameTied = true;
@@ -82,12 +89,15 @@ public partial class TicTacToeGame
     {
         currentTurn = O;
         numberOfTurns = 0;
+
         for (var i = 0; i < 9; i++)
         {
             squares[i] = string.Empty;
         }
+
         isGameOver = false;
         isGameTied = false;
+
         info = $"{O} goes first";
     }
 }

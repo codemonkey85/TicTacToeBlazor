@@ -120,6 +120,8 @@ csharp_style_prefer_utf8_string_literals = true:suggestion
 csharp_style_prefer_readonly_struct = true:suggestion
 csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = true:silent
 csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = true:silent
+csharp_style_prefer_primary_constructors = true:suggestion
+csharp_style_prefer_readonly_struct_member = true:suggestion
 
 [*.{cs,vb}]
 #### Naming styles ####
@@ -202,3 +204,4 @@ dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:s
 dotnet_code_quality_unused_parameters = all:suggestion
 dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
 dotnet_style_allow_multiple_blank_lines_experimental = true:silent
+dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion
