@@ -3,13 +3,16 @@
 # You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 [*.cs]
 
-
 #Core editorconfig formatting - indentation
 
 #use soft tabs (spaces) for indentation
 indent_style = space
 
 #Formatting - spacing options
+
+# New line preferences
+end_of_line = crlf
+insert_final_newline = true
 
 #require a space after a keyword in a control flow statement such as a for loop
 csharp_space_after_keywords_in_control_flow_statements = true
@@ -205,3 +208,7 @@ dotnet_code_quality_unused_parameters = all:suggestion
 dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
 dotnet_style_allow_multiple_blank_lines_experimental = true:silent
 dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion
+
+
+[*.{razor,js,css,html}]
+insert_final_newline = true
