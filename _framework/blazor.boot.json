@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TicTacToeBlazor",
   "resources": {
-    "hash": "sha256-IGqLaUwNKk2Yu4Ba0iUZ/kVSqkv1ha47Cygrw/lR3+o=",
+    "hash": "sha256-a+Zna9jFuxyax4NQhr0B7DK8fLVnqrB/y1uOZNtVGdY=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.pvkr2na9g4.js": "sha256-tFsxPBbhkdn6GKNBKvCRLzrfAHdyM86odYTe0MtrwMk="
     },
@@ -52,7 +52,7 @@
       "System.Text.Encodings.Web.wasm": "sha256-qzotNcGjmC75j16EFMIJNV5ERbpcbSGN0qDxlNujdu4=",
       "System.Text.Json.wasm": "sha256-EaAWNKxvUp/cYXf5lJK89TdVKgc8jZUdZ8fci7HiDSo=",
       "System.Text.RegularExpressions.wasm": "sha256-kTPQF7nZlNyO2Q/tIXG7vdPT2G3u2y7kxpDAFzjEhK8=",
-      "TicTacToeBlazor.wasm": "sha256-syR9naP3S7QpgkSAEB6sQjQVNzbS26sW03vk6xeoAi4="
+      "TicTacToeBlazor.wasm": "sha256-hCKbn0lwVqJlRtDIC+xRI5WwLZJnOlvT84cMxhehnMI="
     }
   },
   "cacheBootResources": true,
