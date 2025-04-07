@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TicTacToeBlazor",
   "resources": {
-    "hash": "sha256-qlw5x99Lw3DMx4aW39s794n3CK2c9SympRdVQkywIiw=",
+    "hash": "sha256-sXDVsMbz8AeHGp16COEMA6N+Uofn9OgeQ8LjIPeExlU=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.Forms.pl7ta3gmle.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.n0kjl225a8.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -39,7 +39,7 @@
       "System.Text.Encodings.Web.yjewx7ynlb.wasm": "System.Text.Encodings.Web.wasm",
       "System.Text.Json.y9z8j08f1x.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.hy063r36wz.wasm": "System.Text.RegularExpressions.wasm",
-      "TicTacToeBlazor.cidese9nit.wasm": "TicTacToeBlazor.wasm",
+      "TicTacToeBlazor.1jbhvol2tx.wasm": "TicTacToeBlazor.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.1p93gcv9fh.js": "dotnet.native.js",
       "dotnet.native.9msu8ucn2h.wasm": "dotnet.native.wasm",
@@ -101,7 +101,7 @@
       "System.Text.Encodings.Web.yjewx7ynlb.wasm": "sha256-ri5IusfFyIkUjHqd9C2j5KhwePbvKfCx401ZkHlLmPQ=",
       "System.Text.Json.y9z8j08f1x.wasm": "sha256-lpfgEKpvrf51543L5GOhZjJdrieNFslS8krCtSNUiFI=",
       "System.Text.RegularExpressions.hy063r36wz.wasm": "sha256-WSl/ra21/U4nuoALjq8pXTLPQxBqmkTXhE57jUFAw4M=",
-      "TicTacToeBlazor.cidese9nit.wasm": "sha256-5B+C4QzLModvhw7zA2ge6YQqctusuSP1792fxtJ7mkU="
+      "TicTacToeBlazor.1jbhvol2tx.wasm": "sha256-nQPgO6Lsj15vEMRxSKSL4reJZqN3ThVjalI4awMxFhg="
     }
   },
   "cacheBootResources": true,
