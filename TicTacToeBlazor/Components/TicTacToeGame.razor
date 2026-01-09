@@ -1,15 +1,17 @@
 ﻿<div class="game-container">
     <p class="mb-4">
-        <h3 class="@(isGameOver ? "game-over" : string.Empty)">
-            @info
-        </h3>
-        <span class="number-of-turns">
+    <h3 class="@(isGameOver
+                   ? "game-over"
+                   : string.Empty)">
+        @info
+    </h3>
+    <span class="number-of-turns">
             Number of turns taken: @numberOfTurns
         </span>
     </p>
 
     <div id="gameboard">
-        @for (int i = 0; i < 9; ++i)
+        @for (var i = 0; i < 9; ++i)
         {
             var key = squares.Keys.FirstOrDefault(k => k == i);
             <div class="square"

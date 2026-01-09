@@ -5,14 +5,6 @@ public partial class TicTacToeGame
     private const string X = nameof(X);
     private const string O = nameof(O);
 
-    private string currentTurn = O;
-    private int numberOfTurns = 0;
-
-    private bool isGameOver = false;
-    private bool isGameTied = false;
-
-    private string info = $"{O} goes first";
-
     private readonly IDictionary<int, string> squares = new Dictionary<int, string>
     {
         [0] = string.Empty,
@@ -23,7 +15,7 @@ public partial class TicTacToeGame
         [5] = string.Empty,
         [6] = string.Empty,
         [7] = string.Empty,
-        [8] = string.Empty,
+        [8] = string.Empty
     };
 
     private readonly int[][] winningCombos =
@@ -35,8 +27,16 @@ public partial class TicTacToeGame
         [1, 4, 7],
         [2, 5, 8],
         [0, 4, 8],
-        [2, 4, 6],
+        [2, 4, 6]
     ];
+
+    private string currentTurn = O;
+
+    private string info = $"{O} goes first";
+
+    private bool isGameOver;
+    private bool isGameTied;
+    private int numberOfTurns;
 
     private void TakeTurn(int id)
     {
@@ -60,7 +60,9 @@ public partial class TicTacToeGame
         }
         else
         {
-            currentTurn = currentTurn is X ? O : X;
+            currentTurn = currentTurn is X
+                ? O
+                : X;
             info = $"It is now {currentTurn}'s turn";
         }
     }
@@ -69,20 +71,24 @@ public partial class TicTacToeGame
     {
         foreach (var combo in winningCombos)
         {
-            var marks = combo.Select(i => squares[i]);
+            var marks = combo.Select(i => squares[i]).ToList();
 
-            if (marks.All(m => m is X) || marks.All(m => m is O))
+            if (!marks.All(m => m is X) && !marks.All(m => m is O))
             {
-                isGameOver = true;
-                return;
+                continue;
             }
+
+            isGameOver = true;
+            return;
         }
 
-        if (squares.Values.All(mark => mark is { Length: > 0 }))
+        if (!squares.Values.All(mark => mark is { Length: > 0 }))
         {
-            isGameTied = true;
-            isGameOver = true;
+            return;
         }
+
+        isGameTied = true;
+        isGameOver = true;
     }
 
     private void ResetBoard()
